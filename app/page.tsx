@@ -1,95 +1,482 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import { Box, Button, Grid, Typography } from "@mui/material";
+import HomeHero from "./components/HomeHero";
+import theme from "./../theme/theme";
+import PopularSearch from "./components/PopularSearch";
+import CategorySlider from "./components/slider/CategorySlider";
+import { BsEmojiSmile } from "react-icons/bs";
+import { IoFlagOutline, IoPaperPlaneOutline } from "react-icons/io5";
+import TourCard from "./components/TourCard";
+import { tourList } from "@/data/tourList";
+import { FaWhatsapp } from "react-icons/fa";
+import { MdOutlineEmail } from "react-icons/md";
+import { RiLinkedinLine } from "react-icons/ri";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <Box sx={{}}>
+      <HomeHero />
+      <PopularSearch />
+      <CategorySlider />
+      <Box
+        sx={{
+          display: "flex",
+          margin: "250px 0 150px",
+          justifyContent: "center",
+          gap: "200px",
+        }}
+      >
+        <Box>
+          <Box
+            sx={{
+              width: "385px",
+              height: "417px",
+              borderRadius: "80px",
+              background: "#DAE9FF",
+              position: "relative",
+            }}
           >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+            <img
+              src="Без имени-2 1.png"
+              alt="human"
+              style={{ position: "absolute", bottom: "0px" }}
             />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
+            <Box
+              sx={{
+                position: "absolute",
+                // alignItems:"center",
+                padding: "12px",
+                width: "180px",
+                height: "80px",
+                background: "#ffffff92",
+                display: "flex",
+                gap: "20px",
+                justifyContent: "center",
+                borderRadius: "3px 3px 80px 3px",
+                left: "-90px",
+                top: "50%",
+                transform: "translateY(-50%)",
+                boxShadow: "-1px 2px 8px #9b9b9b",
+                backdropFilter: "blur(7px)",
+              }}
+            >
+              <Box
+                sx={{
+                  width: "25px",
+                  height: "25px",
+                  background: "#e0d4ff",
+                  display: "flex",
+                  borderRadius: "50%",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <IoPaperPlaneOutline color="#5e23ff" />
+              </Box>
+              <Box>
+                <Typography
+                  sx={{
+                    fontSize: "24px",
+                    fontWeight: "500",
+                    color: "#020202",
+                  }}
+                >
+                  400+
+                </Typography>
+                <Typography sx={{ fontSize: "12px", color: "#707070ddf" }}>
+                  Destinations
+                </Typography>
+              </Box>
+            </Box>
+            <Box
+              sx={{
+                position: "absolute",
+                // alignItems:"center",
+                padding: "12px",
+                width: "180px",
+                height: "80px",
+                background: "#ffffff92",
+                display: "flex",
+                gap: "20px",
+                justifyContent: "center",
+                borderRadius: "3px 3px 3px 80px",
+                right: "-80px",
+                top: "45px",
+                boxShadow: "-1px 2px 8px #9b9b9b",
+                backdropFilter: "blur(7px)",
+              }}
+            >
+              <Box
+                sx={{
+                  width: "25px",
+                  height: "25px",
+                  background: "#e0d4ff",
+                  display: "flex",
+                  borderRadius: "50%",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <BsEmojiSmile color="#5e23ff" />
+              </Box>
+              <Box>
+                <Typography
+                  sx={{
+                    fontSize: "24px",
+                    fontWeight: "500",
+                    color: "#020202",
+                  }}
+                >
+                  3300+
+                </Typography>
+                <Typography sx={{ fontSize: "12px", color: "#707070ddf" }}>
+                  Customers
+                </Typography>
+              </Box>
+            </Box>
+            <Box
+              sx={{
+                position: "absolute",
+                // alignItems:"center",
+                padding: "12px",
+                width: "180px",
+                height: "80px",
+                background: "#ffffff92",
+                display: "flex",
+                gap: "20px",
+                justifyContent: "center",
+                borderRadius: "80px 3px 3px 3px",
+                right: "-40px",
+                bottom: "-10px",
+                boxShadow: "-1px 2px 8px #9b9b9b",
+                backdropFilter: "blur(7px)",
+              }}
+            >
+              <Box
+                sx={{
+                  width: "25px",
+                  height: "25px",
+                  background: "#e0d4ff",
+                  display: "flex",
+                  borderRadius: "50%",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <IoFlagOutline color="#5e23ff" />
+              </Box>
+              <Box>
+                <Typography
+                  sx={{
+                    fontSize: "24px",
+                    fontWeight: "500",
+                    color: "#020202",
+                  }}
+                >
+                  70+
+                </Typography>
+                <Typography sx={{ fontSize: "12px", color: "#707070ddf" }}>
+                  Tours
+                </Typography>
+              </Box>
+            </Box>
+          </Box>
+        </Box>
+        <Box width={"400px"}>
+          <Typography
+            sx={{
+              fontSize: "35px",
+              marginBottom: "20px",
+              fontWeight: "500",
+              color: "#313131",
+            }}
           >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+            Why Choose <span style={{ color: "#1976d2" }}>Travel</span>.int?
+          </Typography>
+          <Typography sx={{ fontSize: "18px", color: "#AEAEAE" }}>
+            There are always undoubted leaders, professionals in their field,
+            experts of their product - that's us! Travel agency Verona-tour does
+            not stand still, we work for you! We are developing our network,
+            opening new offices, inspecting hotels and discovering new
+            countries, and most importantly, we provide our tourists with the
+            best service in Ukraine!
+          </Typography>
+        </Box>
+      </Box>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          marginBottom: "40px",
+        }}
+      >
+        <Typography
+          sx={{
+            fontSize: "42px",
+            textAlign: "center",
+            color: "#313131",
+            fontWeight: "500",
+          }}
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+          Top Tours For You
+        </Typography>
+        <Typography
+          sx={{
+            fontSize: "15px",
+            textAlign: "center",
+            color: "#AEAEAE",
+            fontWeight: "400",
+            marginTop: "15px",
+          }}
         >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+          Much places for your vibes from the world
+        </Typography>
+        <Grid
+          container
+          rowSpacing={5}
+          columnSpacing={1}
+          sx={{ margin: "60px 0" }}
         >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          {tourList.map((data, index) => (
+            <Grid
+              key={index}
+              size={{ xxl: 3, xl: 4, lg: 2 }}
+              sx={{ justifyItems: "center" }}
+            >
+              <TourCard tourData={data} />
+            </Grid>
+          ))}
+        </Grid>
+        <Button
+          variant="contained"
+          sx={{ fontSize: "17px", padding: "10px 40px", fontWeight: "400" }}
+        >
+          View All Tours
+        </Button>
+      </Box>
+      <Box
+        sx={{
+          height: "420px",
+          background: "url(contactBg.png)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          borderRadius: "50px",
+          margin: "100px 0 20px",
+          padding: "50px 0 0",
+        }}
+      >
+        <Typography
+          sx={{
+            textAlign: "center",
+            fontSize: "42px",
+            fontWeight: "700",
+            color: theme.custom.darkMain,
+          }}
+        >
+          Scan QR-code for contact
+        </Typography>
+        <Box
+          sx={{
+            width: "150px",
+            height: "150px",
+            background: "url(linkedinQR.jpeg)",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            margin: "50px auto",
+          }}
+        ></Box>
+      </Box>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          margin: "100px 0",
+        }}
+      >
+        <Box>
+          <Box
+            sx={{ width: "110px", height: "33px", background: "url(logo.png)" }}
+          ></Box>
+          <Typography
+            sx={{
+              fontSize: "19px",
+              color: theme.custom.gray,
+              marginTop: "10px",
+            }}
+          >
+            Enjoy by triping <br /> with Travelint.
+          </Typography>
+          <Box sx={{ display: "flex", marginTop: "10px", gap: "7px" }}>
+            <Button
+              sx={{
+                minWidth: "0px",
+                width: "36px",
+                height: "36px",
+                borderRadius: "50%",
+                border: "1px solid",
+                color: theme.custom.gray,
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                "&:hover": {
+                  color: theme.custom.darkMain,
+                },
+              }}
+            >
+              <FaWhatsapp fontSize={"24px"} />
+            </Button>
+            <Button
+              sx={{
+                minWidth: "0px",
+                width: "36px",
+                height: "36px",
+                borderRadius: "50%",
+                border: "1px solid",
+                color: theme.custom.gray,
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                "&:hover": {
+                  color: theme.custom.darkMain,
+                },
+              }}
+            >
+              <MdOutlineEmail fontSize={"24px"} />
+            </Button>
+            <Button
+              sx={{
+                width: "36px",
+                height: "36px",
+                minWidth: "0",
+                borderRadius: "50%",
+                border: "1px solid",
+                color: theme.custom.gray,
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                "&:hover": {
+                  color: theme.custom.darkMain,
+                },
+              }}
+            >
+              <RiLinkedinLine fontSize={"24px"} />
+            </Button>
+          </Box>
+        </Box>
+        <Box>
+          <Box
+            sx={{
+              fontSize: "20px",
+              color: theme.custom.darkMain,
+              fontWeight: "500",
+            }}
+          >
+            Menu
+          </Box>
+
+          {["Home", "Tours", "Category", "About Us"].map((data) => (
+            <Box
+              key={data}
+              sx={{
+                color: theme.custom.gray,
+                fontSize: "16px",
+                fontWeight: "400",
+                cursor: "pointer",
+                marginTop: "20px",
+                "&:hover": {
+                  color: theme.custom.darkMain,
+                },
+              }}
+            >
+              {data}
+            </Box>
+          ))}
+        </Box>
+        <Box>
+          <Box
+            sx={{
+              fontSize: "20px",
+              color: theme.custom.darkMain,
+              fontWeight: "500",
+            }}
+          >
+            Booking Plan
+          </Box>
+          {["Personal Trip", "Group Trip"].map((data) => (
+            <Box
+              key={data}
+              sx={{
+                color: theme.custom.gray,
+                fontSize: "16px",
+                fontWeight: "400",
+                cursor: "pointer",
+                marginTop: "20px",
+                "&:hover": {
+                  color: theme.custom.darkMain,
+                },
+              }}
+            >
+              {data}
+            </Box>
+          ))}
+        </Box>
+        <Box>
+          <Box
+            sx={{
+              fontSize: "20px",
+              color: theme.custom.darkMain,
+              fontWeight: "500",
+            }}
+          >
+            Support
+          </Box>
+          {["FAQ", "Terms & Conditions", "Privacy Policy"].map((data) => (
+            <Box
+              key={data}
+              sx={{
+                color: theme.custom.gray,
+                fontSize: "16px",
+                fontWeight: "400",
+                cursor: "pointer",
+                marginTop: "20px",
+                "&:hover": {
+                  color: theme.custom.darkMain,
+                },
+              }}
+            >
+              {data}
+            </Box>
+          ))}
+        </Box>
+        <Box>
+          <Box
+            sx={{
+              fontSize: "20px",
+              color: theme.custom.darkMain,
+              fontWeight: "500",
+            }}
+          >
+            Get App
+          </Box>
+          {["Google Play Store", "App Store", "Other Stores"].map((data) => (
+            <Box
+              key={data}
+              sx={{
+                color: theme.custom.gray,
+                fontSize: "16px",
+                fontWeight: "400",
+                cursor: "pointer",
+                marginTop: "20px",
+                "&:hover": {
+                  color: theme.custom.darkMain,
+                },
+              }}
+            >
+              {data}
+            </Box>
+          ))}
+        </Box>
+      </Box>
+    </Box>
   );
 }
