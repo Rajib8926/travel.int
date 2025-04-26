@@ -3,6 +3,10 @@ import theme from "./../../theme/theme";
 import React from "react";
 
 export default function Navbar() {
+  function scrollInto(id: string) {
+    const element = document.getElementById(id) as HTMLInputElement;
+    element.scrollIntoView({ behavior: "smooth" });
+  }
   return (
     <Box
       sx={{
@@ -29,11 +33,66 @@ export default function Navbar() {
           color: "gray",
         }}
       >
-        <Box>Home</Box>
-        <Box>Category</Box>
-        <Box>About us</Box>
-        <Box>Tour</Box>
-        <Box>Contact</Box>
+        <Box
+          onClick={() => {
+            scrollInto("home");
+          }}
+          sx={{
+            cursor: "pointer",
+            transition: "color 0.3s ease",
+            "&:hover": { color: theme.custom.darkMain },
+          }}
+        >
+          Home
+        </Box>
+        <Box
+          onClick={() => {
+            scrollInto("category");
+          }}
+          sx={{
+            cursor: "pointer",
+            transition: "color 0.3s ease",
+            "&:hover": { color: theme.custom.darkMain },
+          }}
+        >
+          Category
+        </Box>
+        <Box
+          onClick={() => {
+            scrollInto("aboutUs");
+          }}
+          sx={{
+            cursor: "pointer",
+            transition: "color 0.3s ease",
+            "&:hover": { color: theme.custom.darkMain },
+          }}
+        >
+          About us
+        </Box>
+        <Box
+          onClick={() => {
+            scrollInto("tours");
+          }}
+          sx={{
+            cursor: "pointer",
+            transition: "color 0.3s ease",
+            "&:hover": { color: theme.custom.darkMain },
+          }}
+        >
+          Tour
+        </Box>
+        <Box
+          onClick={() => {
+            scrollInto("contact");
+          }}
+          sx={{
+            cursor: "pointer",
+            transition: "color 0.3s ease",
+            "&:hover": { color: theme.custom.darkMain },
+          }}
+        >
+          Contact
+        </Box>
       </Box>
 
       <Box sx={{ gap: "5px", display: "flex" }}>
