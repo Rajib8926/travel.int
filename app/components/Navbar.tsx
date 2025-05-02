@@ -1,3 +1,4 @@
+"use client";
 import { Box, Button } from "@mui/material";
 import theme from "./../../theme/theme";
 import React from "react";
@@ -14,12 +15,18 @@ export default function Navbar() {
         alignItems: "center",
         padding: "0 140px",
         height: "100px",
-
         justifyContent: "space-between",
       }}
     >
       <Box>
-        <img src={"logo.png"} alt="Travel.int" />
+        <Box
+          sx={{
+            background: "url(/logo.png)",
+            width: "110px",
+            height: "30px",
+            backgroundSize: "cover",
+          }}
+        ></Box>
       </Box>
 
       <Box

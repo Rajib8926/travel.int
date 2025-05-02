@@ -2,6 +2,7 @@
 import { tourDataType } from "@/data/tourList";
 import { Box, Card, CardActionArea, Typography, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 import React from "react";
 import { BiSolidDollarCircle } from "react-icons/bi";
 import { FaMapMarkerAlt } from "react-icons/fa";
@@ -11,9 +12,13 @@ interface tourDataPropType {
   tourData: tourDataType;
 }
 export default function TourCard({ tourData }: tourDataPropType) {
+  const router = useRouter();
   const theme = useTheme();
   return (
     <MotionCade
+      onClick={() => {
+        router.push(`/tour/${tourData.id}`);
+      }}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
       sx={{
