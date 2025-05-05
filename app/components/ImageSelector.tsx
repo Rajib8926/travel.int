@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { tourDataType } from "@/data/tourList";
 import { Box } from "@mui/material";
 import theme from "../../theme/theme";
@@ -12,11 +12,19 @@ export default function ImageSelector({ data }: { data: tourDataType }) {
     setCurrentImg(index);
   }
   return (
-    <Box sx={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        gap: "20px",
+
+        width: { lg: "645px", md: "510px", xs: "100%" },
+      }}
+    >
       <Box
         sx={{
-          width: "645px",
-          height: "420px",
+          width: "100%",
+          height: { lg: "420px", md: "320px", sm: "330px", xs: "270px" },
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundImage: `url("/${images[currentImg]}")`,
@@ -27,6 +35,7 @@ export default function ImageSelector({ data }: { data: tourDataType }) {
         sx={{
           display: "flex",
           justifyContent: "space-between",
+          width: "100%",
         }}
       >
         {images.map((image, index) => (
@@ -39,8 +48,9 @@ export default function ImageSelector({ data }: { data: tourDataType }) {
                 index === currentImg
                   ? `2px solid ${theme.palette.primary.main}`
                   : "none",
-              height: "155px",
-              width: "215px",
+              height: { lg: "155px", sm: "140px", xs: "110px" },
+              // width: "215px",
+              flex: "1",
               borderRadius: "15px",
               cursor: "pointer",
             }}

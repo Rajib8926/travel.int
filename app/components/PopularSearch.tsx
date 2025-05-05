@@ -16,9 +16,14 @@ const popularSearchList = [
 ];
 export default function PopularSearch() {
   return (
-    <Box sx={{ padding: "80px 50px" }}>
+    <Box sx={{ padding: { md: "80px 50px", xs: "70px 10px" } }}>
       <Typography
-        sx={{ fontSize: "30px", textAlign: "center", color: "#313131" }}
+        sx={{
+          fontSize: { md: "30px", sm: "26px", xs: "24px" },
+
+          textAlign: "center",
+          color: "#313131",
+        }}
       >
         Popular Search
       </Typography>
@@ -27,7 +32,7 @@ export default function PopularSearch() {
           marginTop: "30px",
           display: "flex",
           flexWrap: "wrap",
-          gap: "25px",
+          gap: { md: "25px", xs: "10px" },
         }}
       >
         {popularSearchList.map((data, index) => (
@@ -36,12 +41,11 @@ export default function PopularSearch() {
             sx={{
               border: "1px solid #AEAEAE",
               padding: "3px 15px",
-              fontSize: "18px",
+              fontSize: { sm: "18px", xs: "15px" },
               color: "#AEAEAE",
               textTransform: "none",
               fontWeight: "400",
               borderRadius: "15px",
-              
             }}
           >
             {data}

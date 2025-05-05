@@ -37,7 +37,7 @@ export default function TourCard({ tourData }: tourDataPropType) {
         }}
       >
         <img
-          src={`./tourImage/${tourData.name}.png`}
+          src={`/tourImage/${tourData.name}.png`}
           alt={tourData.name}
           width={"100%"}
         />

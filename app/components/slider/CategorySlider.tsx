@@ -47,7 +47,7 @@ function Responsive() {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
@@ -62,33 +62,37 @@ function Responsive() {
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
-        padding: "30px 70px",
+        padding: { lg: "30px 70px", xs: "20px 10px" },
       }}
     >
       <Box sx={{ display: "flex" }}>
-        <Box sx={{ marginBottom: "30px", marginLeft: "70px" }}>
+        <Box
+          sx={{ marginBottom: "30px", marginLeft: { md: "70px", xs: "20px" } }}
+        >
           <Typography
             sx={{
-              fontSize: "32px",
+              fontSize: { sm: "32px", xs: "25px" },
               position: "relative",
               color: "#313131",
               "&::after": {
                 content: '""',
                 position: "absolute",
                 borderRadius: "2px",
-                width: "40px",
+                width: { md: "40px", xs: "25px" },
                 height: "3px",
                 background: "#313131",
                 zIndex: "4",
                 top: "50%",
-                left: "-60px",
+                left: { md: "-60px", xs: "-30px" },
                 transform: "translateY(-50%)",
               },
             }}
           >
             Category
           </Typography>
-          <Typography sx={{ fontSize: "16px", color: "#AEAEAE" }}>
+          <Typography
+            sx={{ fontSize: { sm: "16px", xs: "14px" }, color: "#AEAEAE" }}
+          >
             You don't have to look for your tour for a long <br /> time. We have
             grouped them by category
           </Typography>

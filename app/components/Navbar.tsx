@@ -2,6 +2,7 @@
 import { Box, Button } from "@mui/material";
 import theme from "./../../theme/theme";
 import React from "react";
+import Logo from "./Logo";
 
 export default function Navbar() {
   function scrollInto(id: string) {
@@ -13,27 +14,20 @@ export default function Navbar() {
       sx={{
         display: "flex",
         alignItems: "center",
-        padding: "0 140px",
-        height: "100px",
+        padding: { xl: "0 140px", md: "0 30px", xs: "0 10px" },
+        height: { sm: "100px" ,xs:"70px"},
         justifyContent: "space-between",
       }}
     >
       <Box>
-        <Box
-          sx={{
-            background: "url(/logo.png)",
-            width: "110px",
-            height: "30px",
-            backgroundSize: "cover",
-          }}
-        ></Box>
+        <Logo />
       </Box>
 
       <Box
         sx={{
-          display: "flex",
-          gap: "6rem",
-          justifyContent: "space-around",
+          display: { lg: "flex", xs: "none" },
+          gap: { xl: "6rem", md: "3rem" },
+          // justifyContent: "space-around",
 
           fontWeight: "400",
           fontSize: "18px",

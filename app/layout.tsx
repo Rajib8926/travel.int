@@ -4,7 +4,6 @@ import { Roboto } from "next/font/google";
 import { Box, ThemeProvider } from "@mui/material";
 import theme from "@/theme/theme";
 
-
 const roboto = Roboto({
   subsets: ["latin"],
 });

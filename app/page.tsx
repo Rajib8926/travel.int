@@ -1,6 +1,6 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
 import HomeHero from "./components/HomeHero";
-import theme from "./../theme/theme";
+
 import PopularSearch from "./components/PopularSearch";
 import CategorySlider from "./components/slider/CategorySlider";
 import { BsEmojiSmile } from "react-icons/bs";
@@ -8,14 +8,19 @@ import { IoFlagOutline, IoPaperPlaneOutline } from "react-icons/io5";
 import TourCard from "./components/TourCard";
 import { tourList } from "@/data/tourList";
 
-import ContactBtn from "./components/ContactBtn";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import AboutPhoto from "./components/AboutPhoto";
 
 export default function Home() {
   return (
     <Box>
       <Navbar />
-      <Box sx={{ margin: "0 280px" }}>
+      <Box
+        sx={{
+          margin: { xxl: "0 280px", lg: "0 110px", sm: "0 30px", xs: "0 5px" },
+        }}
+      >
         <HomeHero />
         <PopularSearch />
         <div id="category">
@@ -25,39 +30,46 @@ export default function Home() {
           <Box
             sx={{
               display: "flex",
-              margin: "250px 0 150px",
+
+              flexDirection: { lg: "row", xs: "column" },
+              alignItems: { lg: "start", xs: "center" },
+              margin: { md: "250px 0 150px", xs: "130px 0 50px" },
               justifyContent: "center",
-              gap: "200px",
+              gap: { lg: "200px", xs: "50px" },
             }}
           >
             <Box>
               <Box
                 sx={{
-                  width: "385px",
-                  height: "417px",
-                  borderRadius: "80px",
+                  width: { sm: "385px", xs: "300px" },
+                  height: { sm: "417px", xs: "330px" },
+                  borderRadius: { sm: "80px", xs: "65px" },
                   background: "#DAE9FF",
                   position: "relative",
                 }}
               >
-                <img
+                {/* <img
                   src="Без имени-2 1.png"
                   alt="human"
                   style={{ position: "absolute", bottom: "0px" }}
-                />
+                /> */}
+                <AboutPhoto />
                 <Box
                   sx={{
                     position: "absolute",
                     // alignItems:"center",
                     padding: "12px",
-                    width: "180px",
-                    height: "80px",
+                    width: { sm: "180px", xs: "140px" },
+                    height: { sm: "80px", xs: "60px" },
                     background: "#ffffff92",
                     display: "flex",
-                    gap: "20px",
+                    gap: { sm: "20px", xs: "10px" },
                     justifyContent: "center",
-                    borderRadius: "3px 3px 80px 3px",
-                    left: "-90px",
+                    borderRadius: {
+                      sm: "3px 3px 80px 3px",
+                      xs: "3px 3px 45px 3px",
+                    },
+                    left: { sm: "-90px", xs: "-60px" },
                     top: "50%",
                     transform: "translateY(-50%)",
                     boxShadow: "-1px 2px 8px #9b9b9b",
@@ -80,14 +92,19 @@ export default function Home() {
                   <Box>
                     <Typography
                       sx={{
-                        fontSize: "24px",
+                        fontSize: { sm: "24px", xs: "18px" },
                         fontWeight: "500",
                         color: "#020202",
                       }}
                     >
                       400+
                     </Typography>
-                    <Typography sx={{ fontSize: "12px", color: "#707070ddf" }}>
+                    <Typography
+                      sx={{
+                        fontSize: { sm: "12px", xs: "10px" },
+                        color: "#707070ddf",
+                      }}
+                    >
                       Destinations
                     </Typography>
                   </Box>
@@ -97,14 +114,17 @@ export default function Home() {
                     position: "absolute",
                     // alignItems:"center",
                     padding: "12px",
-                    width: "180px",
-                    height: "80px",
+                    width: { sm: "180px", xs: "140px" },
+                    height: { sm: "80px", xs: "60px" },
                     background: "#ffffff92",
                     display: "flex",
-                    gap: "20px",
+                    gap: { sm: "20px", xs: "10px" },
                     justifyContent: "center",
-                    borderRadius: "3px 3px 3px 80px",
-                    right: "-80px",
+                    borderRadius: {
+                      sm: "3px 3px 3px 80px",
+                      xs: "3px 3px 3px 50px",
+                    },
+                    right: { sm: "-80px",xs:"-40px" },
                     top: "45px",
                     boxShadow: "-1px 2px 8px #9b9b9b",
                     backdropFilter: "blur(7px)",
@@ -126,14 +146,19 @@ export default function Home() {
                   <Box>
                     <Typography
                       sx={{
-                        fontSize: "24px",
+                        fontSize: { sm: "24px", sx: "18px" },
                         fontWeight: "500",
                         color: "#020202",
                       }}
                     >
                       3300+
                     </Typography>
-                    <Typography sx={{ fontSize: "12px", color: "#707070ddf" }}>
+                    <Typography
+                      sx={{
+                        fontSize: { sm: "12px", xs: "10px" },
+                        color: "#707070ddf",
+                      }}
+                    >
                       Customers
                     </Typography>
                   </Box>
@@ -143,13 +168,16 @@ export default function Home() {
                     position: "absolute",
                     // alignItems:"center",
                     padding: "12px",
-                    width: "180px",
-                    height: "80px",
+                    width: { sm: "180px", xs: "140px" },
+                    height: { sm: "80px", xs: "60px" },
                     background: "#ffffff92",
                     display: "flex",
-                    gap: "20px",
+                    gap: { sm: "20px", xs: "10px" },
                     justifyContent: "center",
-                    borderRadius: "80px 3px 3px 3px",
+                    borderRadius: {
+                      sm: "80px 3px 3px 3px",
+                      xs: "50px 3px 3px 3px",
+                    },
                     right: "-40px",
                     bottom: "-10px",
                     boxShadow: "-1px 2px 8px #9b9b9b",
@@ -172,32 +200,39 @@ export default function Home() {
                   <Box>
                     <Typography
                       sx={{
-                        fontSize: "24px",
+                        fontSize: { sm: "24px", xs: "18px" },
                         fontWeight: "500",
                         color: "#020202",
                       }}
                     >
                       70+
                     </Typography>
-                    <Typography sx={{ fontSize: "12px", color: "#707070ddf" }}>
+                    <Typography
+                      sx={{
+                        fontSize: { sm: "12px", xs: "10px" },
+                        color: "#707070ddf",
+                      }}
+                    >
                       Tours
                     </Typography>
                   </Box>
                 </Box>
               </Box>
             </Box>
-            <Box width={"400px"}>
+            <Box width={{ lg: "400px", md: "70%", xs: "90%" }}>
               <Typography
                 sx={{
-                  fontSize: "35px",
+                  fontSize: { md: "35px", xs: "25px" },
                   marginBottom: "20px",
-                  fontWeight: "500",
+                  fontWeight: { md: "500", xs: "600" },
                   color: "#313131",
                 }}
               >
                 Why Choose <span style={{ color: "#1976d2" }}>Travel</span>.int?
               </Typography>
-              <Typography sx={{ fontSize: "18px", color: "#AEAEAE" }}>
+              <Typography
+                sx={{ fontSize: { md: "18px", xs: "15px" }, color: "#AEAEAE" }}
+              >
                 There are always undoubted leaders, professionals in their
                 field, experts of their product - {"that's"} us! Travel agency
                 Verona-tour does not stand still, we work for you! We are
@@ -219,7 +254,7 @@ export default function Home() {
           >
             <Typography
               sx={{
-                fontSize: "42px",
+                fontSize: { md: "42px", xs: "33px" },
                 textAlign: "center",
                 color: "#313131",
                 fontWeight: "500",
@@ -229,7 +264,7 @@ export default function Home() {
             </Typography>
             <Typography
               sx={{
-                fontSize: "15px",
+                fontSize: { md: "15px", xs: "13px" },
                 textAlign: "center",
                 color: "#AEAEAE",
                 fontWeight: "400",
@@ -240,14 +275,18 @@ export default function Home() {
             </Typography>
             <Grid
               container
-              rowSpacing={5}
-              columnSpacing={1}
-              sx={{ margin: "60px 0" }}
+              rowSpacing={4}
+              columnSpacing={4}
+              sx={{
+                margin: "60px 0",
+
+                justifyContent: "center",
+              }}
             >
               {tourList.map((data, index) => (
                 <Grid
                   key={index}
-                  size={{ xxl: 3, xl: 4, lg: 2 }}
+                  // size={{ xl: 3, lg: 4, }}
                   sx={{ justifyItems: "center" }}
                 >
                   <TourCard tourData={data} />
@@ -262,184 +301,8 @@ export default function Home() {
             </Button>
           </Box>
         </div>
-        <div id="contact">
-          <Box
-            sx={{
-              height: "420px",
-              background: "url(contactBg.png)",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              borderRadius: "50px",
-              margin: "100px 0 20px",
-              padding: "50px 0 0",
-            }}
-          >
-            <Typography
-              sx={{
-                textAlign: "center",
-                fontSize: "42px",
-                fontWeight: "700",
-                color: theme.custom.darkMain,
-              }}
-            >
-              Scan QR-code for contact
-            </Typography>
-            <Box
-              sx={{
-                width: "150px",
-                height: "150px",
-                background: "url(linkedinQR.jpeg)",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                margin: "50px auto",
-              }}
-            ></Box>
-          </Box>
-        </div>
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            margin: "100px 0",
-          }}
-        >
-          <Box>
-            <Box
-              sx={{
-                width: "110px",
-                height: "33px",
-                background: "url(logo.png)",
-              }}
-            ></Box>
-            <Typography
-              sx={{
-                fontSize: "19px",
-                color: theme.custom.gray,
-                marginTop: "10px",
-              }}
-            >
-              Enjoy by triping <br /> with Travelint.
-            </Typography>
-            <ContactBtn />
-          </Box>
-          <Box>
-            <Box
-              sx={{
-                fontSize: "20px",
-                color: theme.custom.darkMain,
-                fontWeight: "500",
-              }}
-            >
-              Menu
-            </Box>
 
-            {["Home", "Tours", "Category", "About Us"].map((data) => (
-              <Box
-                key={data}
-                sx={{
-                  color: theme.custom.gray,
-                  fontSize: "16px",
-                  fontWeight: "400",
-                  cursor: "pointer",
-                  marginTop: "20px",
-                  transition: "color 0.3s ease",
-                  "&:hover": {
-                    color: theme.custom.darkMain,
-                  },
-                }}
-              >
-                {data}
-              </Box>
-            ))}
-          </Box>
-          <Box>
-            <Box
-              sx={{
-                fontSize: "20px",
-                color: theme.custom.darkMain,
-                fontWeight: "500",
-              }}
-            >
-              Booking Plan
-            </Box>
-            {["Personal Trip", "Group Trip"].map((data) => (
-              <Box
-                key={data}
-                sx={{
-                  color: theme.custom.gray,
-                  fontSize: "16px",
-                  fontWeight: "400",
-                  cursor: "pointer",
-                  marginTop: "20px",
-                  transition: "color 0.3s ease",
-                  "&:hover": {
-                    color: theme.custom.darkMain,
-                  },
-                }}
-              >
-                {data}
-              </Box>
-            ))}
-          </Box>
-          <Box>
-            <Box
-              sx={{
-                fontSize: "20px",
-                color: theme.custom.darkMain,
-                fontWeight: "500",
-              }}
-            >
-              Support
-            </Box>
-            {["FAQ", "Terms & Conditions", "Privacy Policy"].map((data) => (
-              <Box
-                key={data}
-                sx={{
-                  color: theme.custom.gray,
-                  fontSize: "16px",
-                  fontWeight: "400",
-                  cursor: "pointer",
-                  marginTop: "20px",
-                  transition: "color 0.3s ease",
-                  "&:hover": {
-                    color: theme.custom.darkMain,
-                  },
-                }}
-              >
-                {data}
-              </Box>
-            ))}
-          </Box>
-          <Box>
-            <Box
-              sx={{
-                fontSize: "20px",
-                color: theme.custom.darkMain,
-                fontWeight: "500",
-              }}
-            >
-              Get App
-            </Box>
-            {["Google Play Store", "App Store", "Other Stores"].map((data) => (
-              <Box
-                key={data}
-                sx={{
-                  color: theme.custom.gray,
-                  fontSize: "16px",
-                  fontWeight: "400",
-                  cursor: "pointer",
-                  marginTop: "20px",
-                  transition: "color 0.3s ease",
-                  "&:hover": {
-                    color: theme.custom.darkMain,
-                  },
-                }}
-              >
-                {data}
-              </Box>
-            ))}
-          </Box>
-        </Box>
+        <Footer />
       </Box>
     </Box>
   );
