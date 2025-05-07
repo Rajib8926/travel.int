@@ -93,8 +93,8 @@ function Responsive() {
           <Typography
             sx={{ fontSize: { sm: "16px", xs: "14px" }, color: "#AEAEAE" }}
           >
-            You don't have to look for your tour for a long <br /> time. We have
-            grouped them by category
+            You {`don't`} have to look for your tour for a long <br /> time. We
+            have grouped them by category
           </Typography>
         </Box>
       </Box>
