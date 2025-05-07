@@ -6,13 +6,13 @@ import "slick-carousel/slick/slick-theme.css";
 import { Box, Typography } from "@mui/material";
 import "./style.css";
 const sliderList = [
-  { name: "Beach", image: "beach.png" },
-  { name: "Mountain", image: "mountain.png" },
-  { name: "Temple", image: "temple.png" },
-  { name: "Town", image: "town.png" },
-  { name: "Forest", image: "forest.png" },
-  { name: "Desert", image: "desert.png" },
-  { name: "City", image: "city.png" },
+  { name: "Beach", image: "/beach.png" },
+  { name: "Mountain", image: "/mountain.png" },
+  { name: "Temple", image: "/temple.png" },
+  { name: "Town", image: "/town.png" },
+  { name: "Forest", image: "/forest.png" },
+  { name: "Desert", image: "/desert.png" },
+  { name: "City", image: "/city.png" },
 ];
 
 function Responsive() {
@@ -109,7 +109,7 @@ function Responsive() {
             >
               <img
                 src={data.image}
-                alt=""
+                alt="img"
                 style={{ margin: "0 auto", cursor: "pointer" }}
               />
 
