@@ -8,14 +8,10 @@ import TourActionSection from "@/app/components/TourActionSection";
 import TourCard from "@/app/components/TourCard";
 import Footer from "@/app/components/Footer";
 import Logo from "@/app/components/Logo";
-export default function page({
-  params,
-}: {
-  params: { id: string; Promise: any };
-}) {
-  const [tour]: tourDataType[] = tourList.filter(
-    (data) => data.id === params.id
-  );
+export default async function page({ params }: { params: any }) {
+  const { id } = await params;
+
+  const [tour]: tourDataType[] = tourList.filter((data) => data.id === id);
 
   return (
     <Box>
