@@ -57,6 +57,7 @@ function Responsive() {
     <Box
       sx={{
         // height: "400px",
+        
         background: "#F9FBFF",
         borderRadius: "20px",
         display: "flex",
@@ -98,7 +99,7 @@ function Responsive() {
           </Typography>
         </Box>
       </Box>
-      <Box className="slider-container">
+      <Box className="slider-container" sx={{ width: "100%" }}>
         <Slider {...settings}>
           {sliderList.map((data, index) => (
             <Box

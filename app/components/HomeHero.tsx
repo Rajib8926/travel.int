@@ -8,7 +8,7 @@ import {
   IoPersonOutline,
   IoSearchOutline,
 } from "react-icons/io5";
-import HeroImage from "./HeroImage";
+import HeroImage from "./heroImage/HeroImage";
 
 export default function HomeHero() {
   return (

@@ -1,18 +1,15 @@
 "use client";
 import React from "react";
-import styled from "styled-components";
+import styles from "./AboutPhoto.module.css";
 
-const ResponsiveImg = styled.img`
-  @media (max-width: 600px) {
-    width: 280px;
-  }
-`;
+
 export default function AboutPhoto() {
   return (
-    <ResponsiveImg
+    <img
       src="Без имени-2 1.png"
       alt="hero"
       style={{ position: "absolute", bottom: "0px" }}
+      className={styles.aboutPhoto}
     />
   );
 }

@@ -10,7 +10,7 @@ import { tourList } from "@/data/tourList";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import AboutPhoto from "./components/AboutPhoto";
+import AboutPhoto from "./components/AboutPhoto/AboutPhoto";
 
 export default function Home() {
   return (
