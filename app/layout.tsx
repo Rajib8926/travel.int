@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={roboto.className}>
-      <body style={{ overflowX: "hidden" }}>
+      <body>
         <ThemeProvider theme={theme}>
           <Box>{children}</Box>
         </ThemeProvider>

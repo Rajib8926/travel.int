@@ -23,7 +23,7 @@ export default function Home() {
       >
         <HomeHero />
         <PopularSearch />
-        <div id="category">
+        <div id="category" style={{ overflowX: "hidden" }}>
           <CategorySlider />
         </div>
         <div id="aboutUs" style={{ border: "1px solid white" }}>

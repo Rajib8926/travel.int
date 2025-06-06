@@ -1,16 +1,16 @@
+"use client";
 import { Box, Button, Typography } from "@mui/material";
 import React from "react";
 import theme from "./../../theme/theme";
 import { CiLocationOn } from "react-icons/ci";
-
 import {
   IoCalendarOutline,
   IoPersonOutline,
   IoSearchOutline,
 } from "react-icons/io5";
 import HeroImage from "./heroImage/HeroImage";
-
 export default function HomeHero() {
+  
   return (
     <Box
       sx={{
@@ -133,6 +133,7 @@ export default function HomeHero() {
                   Date
                 </Typography>
               </Box>
+              
             </Box>
             <Box>
               <Box sx={{ display: "flex", alignItems: "center", gap: "5px" }}>
