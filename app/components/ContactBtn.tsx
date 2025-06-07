@@ -12,7 +12,7 @@ export default function ContactBtn() {
     <Box sx={{ display: "flex", marginTop: "10px", gap: "7px" }}>
       <Link
         target="_blank"
-        href={"https://wa.me/8926576160?text=Hello%20Rajib%2C%20"}
+        href={"https://wa.me/918926576160?text=Hello%20Rajib%2C%20"}
       >
         <Button
           sx={{
@@ -34,7 +34,7 @@ export default function ContactBtn() {
           <FaWhatsapp fontSize={"24px"} />
         </Button>
       </Link>
-      <Link target="_blank" href={"https://mail.google.com/mail/u/0/?fs=1&tf=cm&to=rajibroy89265@gmail.com"}>
+      <Link target="_blank" href={"mailto:rajibroy89265@gmail.com"}>
         <Button
           sx={{
             minWidth: "0px",
