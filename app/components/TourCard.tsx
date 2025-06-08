@@ -14,11 +14,15 @@ interface tourDataPropType {
 export default function TourCard({ tourData }: tourDataPropType) {
   const router = useRouter();
   const theme = useTheme();
+
+  const handleClick = () => {
+    // Use replace instead of push for faster navigation
+    router.replace(`/tour/${tourData.id}`);
+  };
+
   return (
     <MotionCade
-      onClick={() => {
-        router.push(`/tour/${tourData.id}`);
-      }}
+      onClick={handleClick}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
       sx={{
@@ -26,6 +30,7 @@ export default function TourCard({ tourData }: tourDataPropType) {
         height: "350px",
         borderRadius: "20px",
         boxShadow: "0px 1px 16px 3px #e4e4e4",
+        cursor: "pointer",
       }}
     >
       <CardActionArea

@@ -15,7 +15,7 @@ export default function HomeHero() {
     <Box
       sx={{
         width: "100%",
-        marginTop: "30px",
+        marginTop:{ sm:"30px",xs:"15px"},
         height: { lg: "590px", md: "490px", xs: "395px" },
         borderRadius: { md: "72px", sm: "50px", xs: "30px" },
         padding: "39px",

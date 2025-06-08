@@ -17,7 +17,6 @@ const sliderList = [
 
 function Responsive() {
   const settings = {
-    dots: true,
     infinite: true,
     speed: 600,
     slidesToShow: 5,
