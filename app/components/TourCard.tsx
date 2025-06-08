@@ -16,8 +16,8 @@ export default function TourCard({ tourData }: tourDataPropType) {
   const theme = useTheme();
 
   const handleClick = () => {
-    // Use replace instead of push for faster navigation
-    router.replace(`/tour/${tourData.id}`);
+    // Use push instead of replace to maintain history
+    router.push(`/tour/${tourData.id}`);
   };
 
   return (
